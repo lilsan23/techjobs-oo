@@ -24,6 +24,7 @@ public class ListController {
     @RequestMapping(value = "")
     public String list(Model model) {
         JobFieldType[] fields = JobFieldType.values();
+        System.out.println("JobFieldType"+fields);
         model.addAttribute("fields", fields);
         return "list";
     }
